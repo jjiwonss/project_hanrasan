@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한라산 로그인</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+
+    <script src="./js/jquery-1.7.1.min.js"></script>
+    <script src="./js/jquery.easing.1.3.min.js"></script>
+    <script src="./js/jquery-1.12.0.min.js"></script>
+    <script src="./js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/sitemap.js"></script>
+    <script src="./js/SUB_smallnav.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/footer.js"></script>
+
+    <script>
+        $(function(){
+    
+            $('.print_btn').on('click',function(){
+            window.print();
+            return false;
+        });
+    
+    
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headernavwrap">
+
+            <header id="header">
+                <div id="headerwrap">
+                    <ul class="headerleft">
+                        <li><a href="#none">제주특별자치도</a></li>
+                        <li><a href="#none">도의회</a></li>
+                        <li><a href="#none">제주시</a></li>
+                        <li><a href="#none">서귀포시</a></li>
+                    </ul>
+                    <ul class="headerright">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="#none">English</a></li>
+                        <li class="sns"><a href="#none" style="margin-left: 5px;"><img src="./img/2header-youtube.svg"
+                                    alt="유튜브"></a></li>
+                        <li class="sns"><a href="#none"><img src="./img/2header-instagram.svg" alt="인스타그램"></a></li>
+                        <li class="sns"><a href="#none" style="margin-left: -4px;"><img src="./img/2header-facebook.svg"
+                                    alt="페이스북"></a></li>
+                        <li class="reserve"><a href="#none">한라산탐방예약시스템</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <nav id="nav" class="cf">
+                <div id="navwrap">
+                    <div id="Logo">
+                        <h1 class="hidden">한라산</h1>
+                        <a href="index.html">
+                            <img src="./img/2Nav-logo.png" width="138" height="40" alt="한라산 로고">
+                        </a>
+                    </div>
+                    
+                    <div id="navbg"></div>
+                    <ul id="mainnav">
+                        <li><a href="sub1.html" class="maintitle">공원소개</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>공원소개</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub1.html">공원연혁</a></li>
+                                        <li class="fl sub_1"><a href="#none">조직도</a></li>
+                                        <li class="fl sub_1"><a href="#none">찾아오시는길</a></li>
+                                        <li class="fl sub_1"><a href="#none">공원시설안내</a></li>
+                                        <li class="fl sub_1"><a href="#none">탐방객현황</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li><!-- main1 -->
+
+                        <li><a href="sub2.html" class="maintitle">탐방안내</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>탐방안내</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub2.html">탐방정보</a></li>
+                                        <li class="fl sub_1"><a href="#none">안전수칙</a></li>
+                                        <li class="fl sub_1"><a href="#none">탐방안내소</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main2 -->
+
+                        <li><a href="sub3.html" class="maintitle">열린마당</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>열린마당</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub3.html">공지사항</a></li>
+                                        <li class="fl sub_1"><a href="#none">보도자료</a></li>
+                                        <li class="fl sub_1"><a href="#none">궁금합니다</a></li>
+                                        <li class="fl sub_1"><a href="#none">제안합니다</a></li>
+                                        <li class="fl sub_1"><a href="#none">칭찬합시다</a></li>
+                                        <li class="fl sub_1"><a href="#none">자주하는 질문</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main3 -->
+
+                        <li><a href="sub4.html" class="maintitle">홍보관</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>홍보관</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub4.html">동영상자료</a></li>
+                                        <li class="fl sub_1"><a href="#none">생생포토</a></li>
+                                        <li class="fl sub_1"><a href="#none">한라산의 이야기</a></li>
+                                        <li class="fl sub_1"><a href="#none">한라산의 자연생태</a></li>
+                                        <li class="fl sub_1"><a href="#none">한라산 사진전</a></li>
+                                        <li class="fl sub_1"><a href="#none">한라산 사진 DB</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main4 -->
+
+                        <li><a href="sub5.html" class="maintitle">프로그램</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>프로그램</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="#none">어리목본소</a></li>
+                                        <li class="fl sub_1"><a href="#none">성판악지소</a></li>
+                                        <li class="fl sub_1"><a href="#none">관음사지소(산악박물관)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main5 -->
+
+                        <li><a href="sub6.html" class="maintitle">산악박물관</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>산악박물관</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub6.html">이용안내</a></li>
+                                        <li class="fl sub_1"><a href="#none">찾아오시는길</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main6 -->
+
+                    </ul> <!-- id="mainnav" -->
+                    
+
+                    <div id="iconbox">
+                        <div class="search1">
+                            <button type="submit"><img src="./img/2Nav-searchIcon2.svg" alt="검색바"></button>
+                        </div>
+                        <div class="menuicon">
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div id="sitemap">
+                <div id="sitewrap">
+                    <div class="h2text">
+                        <h2>사이트맵</h2>
+                        <div class="stie_close">
+                            <img src="./img/1Top_notice-Xbtn3.svg" width="25" height="25" alt="닫기">
+                        </div>
+                    </div>
+                    <div class="Smenuwrap">
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">공원소개</a>
+                            </div>
+                            <div class="siteright">
+                                <a href="#none">공원연혁</a>
+                                <a href="#none">조직도</a>
+                                <a href="#none">찾아오시는길</a>
+                                <a href="#none">공원시설안내</a>
+                                <a href="#none">탐방객현황</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">탐방안내</a>
+                            </div>
+                            <div class="siteright">
+                                <a href="#none">탐방정보</a>
+                                <a href="#none">안전수칙</a>
+                                <a href="#none">탐방안내소</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu3">
+                            <div class="siteleft">
+                                <a href="#none">열린마당</a>
+                            </div>
+                            <div class="siteright">   
+                                <a href="#none">공지사항</a>
+                                <a href="#none">보도자료</a>
+                                <a href="#none">궁금합니다</a>
+                                <a href="#none">제안합니다</a>
+                                <a href="#none">칭찬합시다</a>
+                                <a href="#none">자주하는질문</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu4">
+                            <div class="siteleft">
+                                <a href="#none">홍보관</a>
+                            </div>
+
+                            <div class="siteright">
+                                <a href="#none">동영상자료</a>
+                                <a href="#none">생생포토</a>
+                                <a href="#none">한라산의 이야기</a>
+                                <a href="#none">한라산의 자연생태</a>
+                                <a href="#none">한라산 사진전</a>
+                                <a href="#none">한라산 사진 DB</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">프로그램</a>
+                            </div>
+                            
+                            <div class="siteright">
+                                <a href="#none">어리목본소</a>
+                                <a href="#none">성판악지소</a>
+                                <a href="#none">관음사지소(산악박물관)</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">산악박물관</a>
+                            </div>
+                            
+                            <div class="siteright">
+                                <a href="#none">이용안내</a>
+                                <a href="#none">찾아오시는길</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search2">
+                <div class="sbox">
+                    <input type="text" placeholder="검색어를 입력해주세요">
+                    <button type="submit">검색</button>
+                </div>
+            </div>
+            <script>
+                $(function(){
+
+                    var search1 = $('.search1 button'); /* 메인메뉴 */
+                    var search2 = $('.search2'); /* 서브메뉴 */
+
+                    search2.hide();
+
+                    search1.click(function(){
+
+                        search2.slideToggle(
+                            function(){search2.addClass('.search1 button')}
+                            )
+                    });
+
+                });
+            </script>
+
+        </div>
+
+        <section id="subtitle1">
+            <h2>로그인</h2>
+        </section>
+
+        <div id="smallsubnav">
+            <div id="subnavwrap">
+                <a href="index.html" class="home"></a>
+                <ul class="main_title">
+                    <li><a href="#none" style="border-bottom: none;">공원소개</a>
+                        <ul>
+                            <li><a href="sub1.html" style="border-top: none;">공원소개</a></li>
+                            <li><a href="sub2.html">탐방안내</a></li>
+                            <li><a href="sub3.html">열린마당</a></li>
+                            <li><a href="sub4.html">홍보관</a></li>
+                            <li><a href="sub5.html">프로그램</a></li>
+                            <li><a href="sub6.html">산악박물관</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sub_title">
+                    <li><a href="#none" style="border-bottom: none;">공원연혁</a>
+                        <ul>
+                            <li><a href="sub1.html" style="border-top: none;">공원연혁</a></li>
+                            <li><a href="#none">조직도</a></li>
+                            <li><a href="#none">찾아오시는길</a></li>
+                            <li><a href="#none">공원시설안내</a></li>
+                            <li><a href="#none">탐방객현황</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="print">
+                    <a href="#none" class="print_btn"><img src="./sub1img/subnav_icon_print.png" alt="인쇄" /></a>
+                </div>
+            </div>
+        </div>
+
+
+        <section id="login">
+            <div id="loginwrap">
+                <div class="login_left">
+
+                    <div class="leftwrap">
+                        <div class="jeju_text">
+                            <h2>제주특별자치도 통합로그인</h2>
+                            <p>
+                                제주특별자치도의 홈페이지 이용이 편리해졌습니다. <br>
+                                제주특별자치도에서는 회원정보보호를 강화하고 제주특별자치도 홈페이지에서 운영 중인 행정시, 포탈홈페이지를
+                                하나의 통합 아이디로 간편하게 이용할 수 있는 단일로그인 서비스를 시행합니다.
+                            </p>
+                            <div class="join_help">
+                                <a href="#none">로그인 문제 발생 시: 홈페이지 사용도우미를 확인해주세요.</a>
+                            </div>
+                        </div>
+                        
+                        <div class="Ksecurity">
+                            <div class="ksecur_text">
+                                <h3>키보드보안프로그램 설치</h3>
+                                <p>키보드로 입력되는 정보가 유출되거나 <br>변조되지 않도록 보호해주는 프로그램입니다.<br>
+                                    설치하지 않으셔도 홈페이지 이용에 아무런 지장이 없으나 <br>보다 안전한 개인정보 보호를 위해 설치를 권장합니다
+                                </p>
+                                <p class="TouchEn_nxKey">※키보드보안(TouchEn nxKey) 관련문의 : 라온시큐어 ☎1644-4128</p>
+                            </div>
+                           <div class="btn_secure">
+                                <a href="#none" class="KeySecure">이번에만 키보드 보안 적용</a>
+                                <a href="#none" class="KeySecureAlways">이브라우저에서 키보드 보안 계속 적용</a>
+                           </div>
+                        </div>
+                    </div>
+
+                </div><!-- class="login_left" -->
+
+                <div class="login_right">
+                    
+                    <div class="rightwrap"> 
+                        <div class="type_tab">
+                            <ul>
+                                <li class="login_tab active"><a href="#type01" class="tab_on">아이디</a></li>
+                                <li class="login_tab"><a href="#type02">소셜</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="inner" id="type01" style="display: block;">
+                            <h3>로그인</h3>
+                            <form id="loginForm">
+                                <div id="login_div">
+                                    <p class="login_1">
+                                        <label for="userId">아이디</label>
+                                        <input type="text" id="userId" placeholder="아이디" />
+                                    </p>
+                                    <p class="login_2">
+                                        <label for="userPWD">비밀번호</label>
+                                        <input type="password" id="userPWD" placeholder="비밀번호" />
+                                    </p>
+                                </div>
+                                
+                                <button type="submit">로그인</button>
+
+                            </form>
+                            <div class="btnLogin"> 
+                                <div class="btn_wrap"> 
+                                    <button class="join">회원가입</button>
+                                    <span class="cut">|</span>
+                                    <button class="find_id">아이디 찾기</button>
+                                    <span class="cut">|</span>
+                                    <button class="find_pw">비밀번호 찾기</button>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="inner sns" id="type02" style="display: none;">
+                            <h3>SNS 간편로그인</h3>
+                            <div class="socialbtn">
+                                <a href="#none" class="facebook">페이스북</a>
+                                <a href="#none" class="naver">네이버</a>
+                                <a href="#none" class="kakao">카카오톡</a>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="non_member">
+                            <h3>비회원로그인</h3>
+                            <div class="non_member_btn">
+                                <button type="button">비회원 인증 바로가기</button>
+                            </div>
+                        </div>
+
+                    </div><!-- class="box_wrap -->
+    
+                </div><!-- lass="login_right" -->
+
+            </div> <!-- id="loginwrap" -->
+
+        </section> <!-- id="login" -->
+
+
+
+
+        <footer>
+            <div class="f_top">
+                <div class="f_top1">
+                    <p>한라산국립공원(어리목본소) 064-713-9950~1</p>
+                    <p>성판악지소 064-725-9950</p>
+                    <p>관음사지소 064-756-9950</p>
+                    <p>영실지소 064-747-9950</p>
+                    <p>돈내코지구안내소 064-710-6921</p>
+                    <div class="f_sns">
+                        <a href="#none"><img src="./img/footer_sns_youtube.svg" alt="유튜브"></a>
+                        <a href="#none"><img src="./img/footer_sns_instagram.svg" alt="인스타그램"></a>
+                        <a href="#none"><img src="./img/footer_sns_facebook.svg"
+                                alt="페이스북"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="f_bottom">
+                <div class="f_bottom2">
+                    <div class="logo">
+                        <h2 class="hidden">한라산</h2>
+                        <a href="index.html"><img src="./img/2Nav-logo.png" alt="한라산로고"></a>
+                    </div>
+                    <div class="footer_text">
+                        <p> 
+                            Copyright 2022 all right reserved, 제주특별자치도 한라산국립공원관리소 <br>
+                            (63077)제주특별자치도 제주시 1100로 2070-61(해안동) TEL 064-713-9950~1/ FAX 064-710-7819 <br>
+                            페이지에 게시된 이메일주소가 자동수집되는 것은 거부하며, 위반시 정보통신망법에 의해 처벌될 수 있습니다.
+                        </p>
+                    </div>
+                    <div class="f_site">
+                        <a href="#none">개인정보처리방침</a>
+                        <div class="site">
+                            <p>관련사이트</p>
+                            <ul class="subsite">
+                                <li><a href="#none">환경부</a></li>
+                                <li><a href="#none">국립공원단</a></li>
+                                <li><a href="#none">세계자연유산제주</a></li>
+                                <li><a href="#none" class="Bnone">제주특별자치도</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <div id="top_btn">
+            <a href="#none"><img src="./img/1TOP_button.png" width="60" height="60" alt="top_btn"></a>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

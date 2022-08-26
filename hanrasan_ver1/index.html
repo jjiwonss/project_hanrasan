@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>한라산 리뉴얼사이트 버전1</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/weather-icons.min.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/jquery-1.7.1.min.js"></script>
+    <script src="./js/jquery.easing.1.3.min.js"></script>
+    <script src="./js/topnotice.js"></script>
+    <script src="./js/jquery-1.12.0.min.js"></script>
+    <script src="./js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/sitemap.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/mainvisual.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="./js/con1.js"></script>
+    <script src="./js/con3_tab.js"></script>
+    <script src="./js/footer.js"></script>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="top_notice">
+            <ul class="notice1">
+                <li class="fl"><img src="./img/1Top_notice-megaphone3.svg" alt="megaphone" /></li>
+                <li class="pop_text fl">
+                    <p>청정한라산을 보전관리하기 위해 한라산 전 구역에는 쓰레기통이 없으므로 쓰레기 되가져가기 운동에 적극 동참하여 주시기 바랍니다. <br>
+                        한라산 탐방로에는 매점이 없으므로(단, 관음사 탐방로와 영실 탐방로 입구에는 휴게소인 매점 있음) 산행에 필요한 물품(충분한 물, 비옷, 간식, 기본등산장비 등)은 사전에
+                        철저히 준비해 오시기 바랍니다.
+                    </p>
+                </li>
+                <li class="close_btn">
+                </li>
+            </ul>
+        </div>
+        <div id="popup">
+            <div class="pop_img">
+                <a href="#" title="qr코드 경고팝업">
+                    <img src="./img/1pop.png" alt="qr코드 경고팝업">
+                </a>
+            </div>
+            <div class="pop_bottom">
+                <form action="#" name="pop_close">
+                    <p>
+                        <input type="checkbox" name="chkbox" value="checkbox">오늘 하루 이 창을 열지 않음
+                        <a href="javascript:closeWin();">[닫기]</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <!-- 팝업창 -->
+        <script>
+            function setCookie(name, value, expiredays) {
+
+                var todayDate = new Date();
+
+                todayDate.setDate(todayDate.getDate() + expiredays);
+
+                document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toUTCString() + ";"
+
+            }
+
+            function closeWin() {
+                if (document.pop_close.chkbox.checked) {
+                    setCookie("popup", "done", 1);
+                }
+                document.all['popup'].style.visibility = "hidden";
+            }
+        </script>
+
+        <script>
+            cookiedata = document.cookie;
+            if (cookiedata.indexOf("popup=done") < 0) {
+                document.all['popup'].style.visibility = "visible";
+            } else {
+                document.all['popup'].style.visibility = "hidden";
+            }
+        </script>
+
+
+        <div id="headernavwrap">
+
+            <header id="header">
+                <div id="headerwrap">
+                    <ul class="headerleft">
+                        <li><a href="#none">제주특별자치도</a></li>
+                        <li><a href="#none">도의회</a></li>
+                        <li><a href="#none">제주시</a></li>
+                        <li><a href="#none">서귀포시</a></li>
+                    </ul>
+                    <ul class="headerright">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="#none">English</a></li>
+                        <li class="sns"><a href="#none" style="margin-left: 5px;"><img src="./img/2header-youtube.svg"
+                                    alt="유튜브"></a></li>
+                        <li class="sns"><a href="#none"><img src="./img/2header-instagram.svg" alt="인스타그램"></a></li>
+                        <li class="sns"><a href="#none" style="margin-left: -4px;"><img src="./img/2header-facebook.svg"
+                                    alt="페이스북"></a></li>
+                        <li class="reserve"><a href="#none">한라산탐방예약시스템</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <nav id="nav" class="cf">
+
+                <div id="navwrap">
+                    <div id="Logo">
+                        <h1 class="hidden">한라산</h1>
+                        <a href="index.html">
+                            <img src="./img/2Nav-logo.png" width="138" height="40" alt="한라산 로고">
+                        </a>
+                    </div>
+
+                    <div id="navbg"></div>
+                    <ul id="mainnav">
+                        <li>
+                            <a href="sub1.html" class="maintitle">공원소개</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>공원소개</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub1.html">공원연혁</a></li>
+                                        <li class="fl sub_1"><a href="#none">조직도</a></li>
+                                        <li class="fl sub_1"><a href="#none">찾아오시는길</a></li>
+                                        <li class="fl sub_1"><a href="#none">공원시설안내</a></li>
+                                        <li class="fl sub_1"><a href="#none">탐방객현황</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li><!-- main1 -->
+
+                        <li><a href="sub2.html" class="maintitle">탐방안내</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>탐방안내</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub2.html">탐방정보</a></li>
+                                        <li class="fl sub_1"><a href="#none">안전수칙</a></li>
+                                        <li class="fl sub_1"><a href="#none">탐방안내소</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main2 -->
+
+                        <li><a href="sub3.html" class="maintitle">열린마당</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>열린마당</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub3.html">공지사항</a></li>
+                                        <li class="fl sub_1"><a href="#none">보도자료</a></li>
+                                        <li class="fl sub_1"><a href="#none">궁금합니다</a></li>
+                                        <li class="fl sub_1"><a href="#none">제안합니다</a></li>
+                                        <li class="fl sub_1"><a href="#none">칭찬합시다</a></li>
+                                        <li class="fl sub_1"><a href="#none">자주하는 질문</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main3 -->
+
+                        <li><a href="sub4.html" class="maintitle">홍보관</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>홍보관</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub4.html">동영상자료</a></li>
+                                        <li class="fl sub_1"><a href="#none">생생포토</a></li>
+                                        <li class="fl sub_1"><a href="#none">한라산의 이야기</a></li>
+                                        <li class="fl sub_1"><a href="#none">한라산의 자연생태</a></li>
+                                        <li class="fl sub_1"><a href="#none">한라산 사진전</a></li>
+                                        <li class="fl sub_1"><a href="#none">한라산 사진 DB</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main4 -->
+
+                        <li><a href="sub5.html" class="maintitle">프로그램</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>프로그램</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub5.html">어리목본소</a></li>
+                                        <li class="fl sub_1"><a href="#none">성판악지소</a></li>
+                                        <li class="fl sub_1"><a href="#none">관음사지소(산악박물관)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main5 -->
+
+                        <li><a href="sub6.html" class="maintitle">산악박물관</a><!-- 메인메뉴 -->
+                            <ul class="submenu fl cf">
+                                <li class="subtitle fl">
+                                    <div>
+                                        <h2>산악박물관</h2>
+                                        <p>
+                                            국민의 삶과 함께하는 <br>
+                                            국립공원 한라산
+                                        </p>
+                                        <img src="./img/2Nav-subtitleimg.png" width="264" height="181"
+                                            alt="구상나무와 산굴뚝나비">
+                                    </div>
+                                </li>
+                                <li class="Sub1">
+                                    <ul>
+                                        <li class="fl sub_1"><a href="sub6.html">이용안내</a></li>
+                                        <li class="fl sub_1"><a href="#none">찾아오시는길</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><!-- main6 -->
+
+                    </ul> <!-- id="mainnav" -->
+
+
+                    <div id="iconbox">
+                        <div class="search1">
+                            <button type="submit"><img src="./img/2Nav-searchIcon2.svg" alt="검색바"></button>
+                        </div>
+                        <div class="menuicon">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="sitemap">
+                <div id="sitewrap">
+                    <div class="h2text">
+                        <h2>사이트맵</h2>
+                        <div class="stie_close">
+                            <img src="./img/1Top_notice-Xbtn3.svg" width="25" height="25" alt="닫기">
+                        </div>
+                    </div>
+                    <div class="Smenuwrap">
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">공원소개</a>
+                            </div>
+                            <div class="siteright">
+                                <a href="#none">공원연혁</a>
+                                <a href="#none">조직도</a>
+                                <a href="#none">찾아오시는길</a>
+                                <a href="#none">공원시설안내</a>
+                                <a href="#none">탐방객현황</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">탐방안내</a>
+                            </div>
+                            <div class="siteright">
+                                <a href="#none">탐방정보</a>
+                                <a href="#none">안전수칙</a>
+                                <a href="#none">탐방안내소</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">열린마당</a>
+                            </div>
+                            <div class="siteright">   
+                                <a href="#none">공지사항</a>
+                                <a href="#none">보도자료</a>
+                                <a href="#none">궁금합니다</a>
+                                <a href="#none">제안합니다</a>
+                                <a href="#none">칭찬합시다</a>
+                                <a href="#none">자주하는질문</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">홍보관</a>
+                            </div>
+
+                            <div class="siteright">
+                                <a href="#none">동영상자료</a>
+                                <a href="#none">생생포토</a>
+                                <a href="#none">한라산의 이야기</a>
+                                <a href="#none">한라산의 자연생태</a>
+                                <a href="#none">한라산 사진전</a>
+                                <a href="#none">한라산 사진 DB</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">프로그램</a>
+                            </div>
+                            
+                            <div class="siteright">
+                                <a href="#none">어리목본소</a>
+                                <a href="#none">성판악지소</a>
+                                <a href="#none">관음사지소(산악박물관)</a>
+                            </div>
+                        </div>
+                        <div class="sitemenu1">
+                            <div class="siteleft">
+                                <a href="#none">산악박물관</a>
+                            </div>
+                            
+                            <div class="siteright">
+                                <a href="#none">이용안내</a>
+                                <a href="#none">찾아오시는길</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="search2">
+                <div class="sbox">
+                    <input type="text" placeholder="검색어를 입력해주세요">
+                    <button type="submit">검색</button>
+                </div>
+            </div>
+
+
+            <script>
+                $(function () {
+
+                    var search1 = $('.search1 button');
+                    var search2 = $('.search2');
+
+                    search2.hide();
+
+                    search1.click(function () {
+
+                        search2.slideToggle(
+                            function () {
+                                search2.addClass('.search1 button')
+                            }
+                        )
+                    });
+
+                });
+            </script>
+
+
+        </div>
+
+
+        <section id="mainvisual">
+            <ul class="bannerimage">
+                <li class="Bimg1">
+                    <p>배너이미지1</p>
+                </li>
+                <li class="Bimg2">
+                    <p>배너이미지2</p>
+                </li>
+                <li class="Bimg3">
+                    <p>배너이미지3</p>
+                </li>
+                <li class="Bimg4">
+                    <p>배너이미지4</p>
+                </li>
+            </ul>
+
+            <div id="flexbox">
+                <div id="bannerbox">
+                    <div id="banner">
+                        <div class="weather">
+                            <div class="temp_info">
+                                <p>한라산 오늘</p>
+                                <div class="date"></div>
+                                <div class="Wiocn"></div>
+                                <div class="ctemp"></div>
+                            </div>
+                        </div>
+
+                        <div class="bannertitle">
+                            <h2>태고의 신비를 간직한 한라산 <br>
+                                HALLASAN NATIONAL PARK</h2>
+                        </div>
+
+                        <div class="bannerslide">
+                            <ul class="rollingbtn">
+                                <li class="leftbtn"><a href="#none">left</a></li>
+                                <li class="rightbtn"><a href="#none">right</a></li>
+                            </ul>
+
+                            <ul class="slideplay">
+                                <li class="stop"><a href="#none">stop</a></li>
+                                <li class="play"><a href="#none">play</a></li>
+                            </ul>
+
+                            <ul class="buttonList cf">
+                                <li class="on"><a href="#none">01</a></li>
+                                <li><a href="#none">02</a></li>
+                                <li><a href="#none">03</a></li>
+                                <li><a href="#none">04</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tourGuide">
+                    <div class="tourWrap">
+                        <div>
+                            <a href="#none">어리목 탐방로 <br> <span>정상운영</span>
+                            </a>
+                            <a href="#none">영실 탐방로 <br> <span>정상운영</span>
+                            </a>
+                            <a href="#none">성판악 탐방로 <br> <span>정상운영</span>
+                            </a>
+                            <a href="#none">관음사 탐방로 <br> <span>정상운영</span>
+                            </a>
+                            <a href="#none">어승생악 탐방로 <br> <span>정상운영</span>
+                            </a>
+                            <a href="#none">돈내코 탐방로 <br> <span>정상운영</span>
+                            </a>
+                            <a href="#none">석굴암 탐방로 <br> <span>정상운영</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="content1">
+            <div id="cont1wrap">
+                <div class="con1_left">
+                    <div class="notice_layout">
+                        <div class="notice_title">
+                            <h2>한라산 소식</h2>
+                            <div></div>
+                            <a href="#none"><img src="./img/content1-noticeicon.svg" alt="더보기"></a>
+                        </div>
+                        <ul class="notice_2">
+                            <li>
+                                <a href="#none">
+                                    <strong>한라산국립공원 깃대종 구상나무 현장교육 운영알림</strong>
+                                    <div class="noticedate">2022.05.11</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <strong>한라산국립공원 탐방객 현황(2022.4.30.까지) 자료</strong>
+                                    <div class="noticedate">2022.05.09</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <strong>국립공원 스탬프 투어 여권 추가배부와 관련하여 여권이 모두 소진되었음을 알려드립니다.</strong>
+                                    <div class="noticedate">2022.05.03</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bookmarkwrap">
+                        <div class="b_title">
+                            <h2>자주찾는 <br> <span>메뉴 도우미</span></h2>
+                        </div>
+                        <div class="bookmark1">
+                            <a href="#none"><img src="./img/content1-icon1.png" width="45" height="45" alt="탐방예약">탐방예약</a>
+                        </div>
+                        <div class="bookmark2">
+                            <a href="#none"><img src="./img/content1-icon1.png" width="45" height="45" alt="프로그램예약">
+                                프로그램예약</a>
+                        </div>
+                        <div class="bookmark3">
+                            <a href="#none"><img src="./img/content1-icon3.png" width="45" height="45" alt="탐방로 안내"> 탐방로
+                                안내</a>
+                        </div>
+                        <div class="bookmark4">
+                            <a href="#none"><img src="./img/content1-icon4.png" width="45" height="45"
+                                    alt="공원시설안내">공원시설안내</a>
+                        </div>
+                        <div class="bookmark5">
+                            <a href="#none"><img src="./img/content1-icon5.png" width="45" height="45" alt="관음사 야영장">관음사
+                                야영장</a>
+                        </div>
+                        <div class="bookmark6">
+                            <a href="#none"><img src="./img/content1-icon6.png" width="45" height="45" alt="탐방로 실시간">탐방로
+                                실시간 <br>
+                                CCTV 보기</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="con1_right">
+                    <div class="hot_top">
+                        <h2>한라산 핫 알림</h2>
+                        <div class="hot_rolling">
+                            <img src="./img/content1_hot_arrow_left.svg" width="30" height="30" alt="왼쪽화살표"
+                                class="prev" />
+                            <div class="hot_arrow_number">
+                                <p class="bl">1/4</p>
+                                <p>2/4</p>
+                                <p>3/4</p>
+                                <p>4/4</p>
+                            </div>
+                            <img src="./img/content1_hot_arrow_right.svg" width="30" height="30" alt="오른쪽화살표"
+                                class="next" />
+                        </div>
+
+                    </div>
+
+                    <div class="hot_bottom">
+                        <ul class="hot_allow_img">
+                            <li>
+                                <a href="#none"><img src="img/content1-hot_warning.png" alt="경고"></a>
+                                <a href="#none"><img src="img/content1_hot_img1.png" alt="이미지1"></a>
+                            </li>
+                            <li>
+                                <a href="#none"><img src="img/content1_hot_img2.png" alt="이미지2"></a>
+                                <a href="#none"><img src="img/content1_hot_img3.png" alt="이미지3"></a>
+                            </li>
+                            <li>
+                                <a href="#none"><img src="img/content1_hot_img4.png" alt="이미지4"></a>
+                                <a href="#none"><img src="img/content1_hot_img5.png" alt="이미지5"></a>
+                            </li>
+                            <li>
+                                <a href="#none"><img src="img/content1_hot_img6.png" alt="이미지6"></a>
+                                <a href="#none"><img src="img/content1_hot_img7.png" alt="이미지7"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div><!-- con1_right -->
+
+            </div>
+        </section>
+
+        <section id="content2">
+            <div id="con2wrap">
+                <div class="program">
+                    <div class="program_top">
+                        <h2>탐방프로그램</h2>
+                        <a href="#none"><img src="./img/content1-noticeicon.svg" alt="더보기" width="30" height="30"></a>
+                    </div>
+                    <ul class="program_bottom">
+                        <li><a href="#none"><img src="./img/content2_img.jpg" alt="이미지2">
+                                <p>고지대에서 듣는 한라산이야기</p>
+                            </a></li>
+                        <li><a href="#none"><img src="./img/content2_img2.png" alt="이미지2">
+                                <p>토닥토닥 쓰담쓰담</p>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="mediazone">
+                    <div class="mediazone_top">
+                        <h2>미디어존</h2>
+                        <a href="#none"><img src="./img/content1-noticeicon.svg" alt="더보기" width="30" height="30"></a>
+                    </div>
+                    <ul class="mediazone_bottom">
+                        <li><a href="#none"><img src="./img/content2_media1.jpg" alt="이미지1">
+                                <p>생생포토 <br>
+                                    <span>신비하고 오묘한 한라산의 수목</span></p>
+                            </a></li>
+                        <li><a href="#none"><img src="./img/content2_media2.jpg" alt="이미지2">
+                                <p>
+                                    홍보동영상 <br>
+                                    <span>[안전하고 즐거운 산행 1부]</span>
+                                </p>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="content3">
+
+            <div id="con3wrap">
+                <div class="con3left">
+
+
+                    <ul class="con3_tab">
+                        <li class="on"><a href="#none">어리목</a></li>
+                        <li><a href="#none">영실</a></li>
+                        <li><a href="#none">성판악</a></li>
+                        <li><a href="#none">관음사</a></li>
+                        <li><a href="#none">돈내코</a></li>
+                        <li><a href="#none">어승생악</a></li>
+                        <li><a href="#none">석굴암</a></li>
+                    </ul>
+
+                    <div class="con3_text">
+                        <div class="slidewrap">
+                            <div class="slide1">
+                                <h3>어리목 탐방로</h3>
+                                <img src="./img/content3_img1.jpg" width="500" height="270" alt="어리목탐방로">
+                                <p>
+                                    <span>총 6.8㎞ [어리목→윗세오름(4.7㎞,2시간)→남벽분기점(2.1㎞,3시간)]</span> <br>
+
+                                    어리목탐방로는 한라산국립공원 어리목탐방로 입구(해발970m)에서 시작하여 어리목계곡, 사제비동산(해발1,423m), 만세동산(해발1,606m),
+                                    윗세오름 대피소(해발1,700m), 남벽순환로를 거쳐 남벽분기점(해발1,600m)까지 이어지는 총 6.8km의 탐방로이며 편도 3시간 정도 소요된다.
+
+                                </p>
+                                <div class="con3_more"><button onclick="return false">자세히보기</button></div>
+                            </div>
+
+                            <div class="slide1">
+                                <h3>영실탐방로</h3>
+                                <img src="./img/content3_img2.jpg" width="500" height="270" alt="영실탐방로">
+                                <p>
+                                    <span>총 5.8㎞ [영실→윗세오름(3.7㎞,1시간30분)→남벽분기점(2.1㎞,2시간30분)]</span> <br>
+
+
+                                    영실탐방로는 영실관리사무소(해발1000m)에서 영실휴게소(해발1,280m)까지 2.4km의 자동차도로 및 탐방로 병행구간과 영실휴게소에서
+                                    윗세오름대피소(해발1,700m )을 경유 남벽분기점(해발 1,600m) 까지 5.8km의 탐방로이며, 영실관리사무소에서 출발 시 편도 3시간15분,
+                                    영실휴게소에서 출발 시 편도 2시간30분정도 소요된다.
+
+                                </p>
+                                <div class="con3_more"><button onclick="return false">자세히보기</button></div>
+                            </div>
+
+                            <div class="slide1">
+                                <h3>성판악탐방로<span>(탐방예약 필수)</span>
+                                </h3>
+                                <img src="./img/content3_img3.jpg" width="500" height="270" alt="영실탐방로">
+                                <p>
+                                    <span>총 9.6㎞ [성판악→진달래밭(7.3㎞,3시간)→정상(2.3㎞,4시간30분)]</span> <br>
+                                    한라산 동쪽코스인 성판악탐방로는 관음사탐방로와 더불어 한라산 정상인 백록담 을 오를 수 있는 탐방로이다. 한라산 탐방로 중에는 가장 긴 9.6㎞이며,
+                                    편도 4시간 30분이 소요된다.
+
+                                    이 탐방로의 특징은 백록담 정상을 제외하고는 대부분 숲으로 형성되어 있어 삼림욕을 즐기며 탐방하기에 최적의 장소이다.
+
+                                </p>
+                                <div class="con3_more"><button onclick="return false">자세히보기</button></div>
+                            </div>
+
+                            <div class="slide1">
+                                <h3>관음사탐방로<span>(탐방예약 필수)</span>
+                                </h3>
+                                <img src="./img/content3_img4.jpg" width="500" height="270" alt="영실탐방로">
+                                <p>
+                                    <span>총 8.7㎞ [관음사지구야영장→삼각봉대피소(6㎞,3시간20분)→정상(2.7㎞, 5시간)]</span> <br>
+
+                                    한라산 북쪽코스인 관음사탐방로는 성판악탐방로와 더불어 한라산 정상인 백록담 을 오를 수 있는 8.7㎞의 탐방로이며, 편도 5시간 정도 소요된다. 계곡이
+                                    깊고 산세가 웅장하며, 해발 고도 차이도 커 한라산의 진면목을 볼 수 있다. 전문 산악인들은 물론, 성판악 코스 탐방객들도 하산 할 때 주로 이 코스를
+                                    이용한다.
+                                </p>
+                                <div class="con3_more"><button onclick="return false">자세히보기</button></div>
+                            </div>
+
+                            <div class="slide1">
+                                <h3>돈내코 탐방로</h3>
+                                <img src="./img/content3_img5.jpg" width="500" height="270" alt="영실탐방로">
+                                <p>
+                                    <span>총 7㎞ [돈내코탐방안내소→평궤대피소(5.3㎞)→남벽분기점(1.7㎞,3시간 30분)]</span> <br>
+
+                                    돈내코탐방로는 서귀포시 돈내코유원지 상류에 위치한 탐방안내소(해발500m)에서 시작하여 썩은물통, 살채기도, 평궤대피소(해발1,450m)를 지나
+                                    남벽분기점(해발1,600m)까지 이어지는 총7km의 탐방로이며 편도 3시간 30분 정도 소요된다. 윗세오름과 연결된 남벽순환로를 따라가면 어리목과
+                                    영실탐방로로 하산 할 수도 있다.
+                                </p>
+                                <div class="con3_more"><button onclick="return false">자세히보기</button></div>
+                            </div>
+
+                            <div class="slide1">
+                                <h3>어승생악 탐방로</h3>
+                                <img src="./img/content3_img6.jpg" width="500" height="270" alt="영실탐방로">
+                                <p>
+                                    <span>총1.3㎞ [탐방안내소 → 어승생악정상(1.3㎞,정상 30분)]</span> <br>
+
+                                    어승생악은 가벼운 등산을 원하는 탐방객이 즐겨찾는 오름으로서 자연생태가 잘 보존되어 있으며, 자연학습탐방로로 활용되고 있다. 날씨가 쾌청한 날에는 멀리
+                                    추자도, 비양도, 성산일출봉이 한눈에 내려다보이며 어승생악 정상까지는 1.3Km이다. 탐방소요시간은 편도 약 30분이며, 어리목 탐방안내소 옆에 입구가
+                                    있다.
+
+                                </p>
+                                <div class="con3_more"><button onclick="return false">자세히보기</button></div>
+                            </div>
+
+                            <div class="slide1">
+                                <h3>석굴암 탐방로</h3>
+                                <img src="./img/content3_img7.jpg" width="500" height="270" alt="영실탐방로">
+                                <p>
+                                    <span>[석굴암까지 50분 - 1.5Km]</span> <br>
+                                    석굴암탐방로는 제주시와 인접해 있어 승용차로 약 20분 정도면 탐방로 입구에 도착 할 수 있다. 1100도로(1139번도로)변 천왕사사찰 입구에서
+                                    삼나무 숲길을 10여분 걸으면 탐방로가 시작되는 충혼묘지 주차장에 도착한다. 석굴암 암자까지 편도 1. 5Km에 50분이 소요된다.
+                                </p>
+                                <div class="con3_more"><button onclick="return false">자세히보기</button></div>
+                            </div>
+                        </div>
+                        <div class="con3_arrow">
+                            <img src="./img/content3_arrow_left.svg" class="con3_L" width="50" height="50" alt="left" />
+                            <img src="./img/content3_arrow_right.svg" class="con3_R" width="50" height="50"
+                                alt="right" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="con3right">
+                    <div class="con3title">
+                        <p>지도별로 살펴보는</p>
+                        <h2><span>한라산</span> 탐방코스</h2>
+                    </div>
+                    <div class="con3_map">
+                        <img src="./img/content3_map.png" alt="한라산 탐방로 지도">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="f_top">
+                <div class="f_top1">
+                    <p>한라산국립공원(어리목본소) 064-713-9950~1</p>
+                    <p>성판악지소 064-725-9950</p>
+                    <p>관음사지소 064-756-9950</p>
+                    <p>영실지소 064-747-9950</p>
+                    <p>돈내코지구안내소 064-710-6921</p>
+                    <div class="f_sns">
+                        <a href="#none"><img src="./img/footer_sns_youtube.svg" alt="유튜브"></a>
+                        <a href="#none"><img src="./img/footer_sns_instagram.svg" alt="인스타그램"></a>
+                        <a href="#none"><img src="./img/footer_sns_facebook.svg"
+                                alt="페이스북"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="f_bottom">
+                <div class="f_bottom2">
+                    <div class="logo">
+                        <h2 class="hidden">한라산</h2>
+                        <a href="index.html"><img src="./img/2Nav-logo.png" alt="한라산로고"></a>
+                    </div>
+                    <div class="footer_text">
+                        <p>
+                            Copyright 2022 all right reserved, 제주특별자치도 한라산국립공원관리소 <br>
+                            (63077)제주특별자치도 제주시 1100로 2070-61(해안동) TEL 064-713-9950~1/ FAX 064-710-7819 <br>
+                            페이지에 게시된 이메일주소가 자동수집되는 것은 거부하며, 위반시 정보통신망법에 의해 처벌될 수 있습니다.
+                        </p>
+                    </div>
+                    <div class="f_site">
+                        <a href="#none">개인정보처리방침</a>
+                        <div class="site">
+                            <p>관련사이트</p>
+                            <ul class="subsite">
+                                <li><a href="#none">환경부</a></li>
+                                <li><a href="#none">국립공원단</a></li>
+                                <li><a href="#none">세계자연유산제주</a></li>
+                                <li><a href="#none" class="Bnone">제주특별자치도</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <div id="top_btn">
+            <a href="#none"><img src="./img/1TOP_button.png" width="60" height="60" alt="top_btn"></a>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
